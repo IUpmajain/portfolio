@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: transparent; */
+}
+body{
+    /* background: rgb(30, 30, 30); */
+    background: #030008;
+    color: white;
+} 
+
+
+/* navbar */
+.logo{
+    animation: slideright 1s ease forwards;
+}
+.box{
+    color: white;
+    transition: 0.3s;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 500;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+}
+.box:hover{
+    color: yellow;
+    text-decoration: underline;
+    /* border-bottom: 1px solid yellow; */
+    cursor: pointer;
+}
+.active{
+    color: yellow;
+}
+
+@keyframes slideright{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* intro or home section */
+.card{
+    background: transparent;
+    color: white;
+    font-size: 1.75rem;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 70px 10% 0;
+}
+
+.card-body h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.card-body h3 span{
+    color: #0ef;
+}
+
+.card-body h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.card-body p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideleft 1s forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5 ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: .5s;
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 5px #0ef;
+}
+
+.home-sci p{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 40px; */
+    /* height: 40px; */
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5 ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: .5s;
+    margin: 30px 15px 30px 0;
+    padding: 5px;
+}
+
+.home-sci p:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 5px #0ef;
+}
+
+
+
+
+@keyframes slidebottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/* @media(max-width:768px){
+    #intro{
+        margin-top: 1000px;
+    }
+} */
+
+
+
+/* skills */
+.collection .sub-title{
+    font-size: 50px;
+    text-align: center;
+    margin: 50px;
+}
+
+.collection h1 span{
+    color: #0ef;
+}
+
+.technicalbar{
+    width: 100%;
+    /* margin-bottom: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* position: relative; */
+}
+
+.heading1{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.technicalbar .radialbar{
+    width: 24%;
+    height: 180px;
+    margin-bottom: 10px;
+    position: relative;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
+}
+.technicalbar .radialbar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)rotate(-90deg);
+    width: 100px;
+    height: 160px;
+}
+.progressbar{
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animatebar 1s linear forwards;
+}
+@keyframes animatebar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+
+}
+
+.path-1{
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+
+.path-2{
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3{
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4{
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+.path-5{
+    animation: animate-path5 1s 1s linear forwards;
+}
+
+.path-6{
+    animation: animate-path6 1s 1s linear forwards;
+}
+.path-7{
+    animation: animate-path7 1s 1s linear forwards;
+}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 30;
+    }
+}
+
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 45;
+    }
+}
+
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 110;
+    }
+}
+
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 80;
+    }
+}
+
+@keyframes animate-path5{
+    100%{
+        stroke-dashoffset: 180;
+    }
+}
+
+@keyframes animate-path6{
+    100%{
+        stroke-dashoffset: 102;
+    }
+}
+
+@keyframes animate-path7{
+    100%{
+        stroke-dashoffset: 140;
+    }
+}
+
+.percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technicalbar .radialbar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-100px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5 1s linear forwards;
+    opacity: 0;
+    color: white;
+}
+
+
+
+@media(max-width:768px){
+    #skills{
+        overflow-x: hidden;
+        margin-top: 180px;
+    }
+}
+
+@media(max-width:660px){
+    #skills{
+        overflow-x: hidden;
+    }
+}
+
+
+/* projects */
+.projectlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.worktitle{
+    font-size: 50px;
+    text-align: center;
+    margin: 90px;
+}
+.worktitle span{
+    color: #0ef;
+}
+
+.work{
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work a img{
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    border-radius: 10px;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+
+
+.layer h3{
+    font-size: 500;
+    margin-bottom: 10px;
+}
+.layer a{
+    margin-top: 10px;
+    color: #ff004f;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.layer i{
+    margin-top: 10px;
+    color: #ff004f;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btnbox{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btnbox:hover{
+    box-shadow: 0 0 5px cyan, 0 0 5px cyan , 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan;
+}
+
+
+.hello{
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+.intropara{
+    font-size: medium;
+}
+.skilldesc{
+    font-weight: 400;
+    font-size: 0.9rem;
+    max-width: 51rem;
+}
+.workbtn{
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.workbtn:hover{
+    background-color: blue;
+    color: white;
+}
+.inp::placeholder{
+    color: aliceblue;
+}
+.navbar-toggler-icon{
+ background-color: white;
+    color: white;
+}
+
+
+
+@keyframes showtext{
+    100%{
+        opacity: 1;
+    }
+}
+
